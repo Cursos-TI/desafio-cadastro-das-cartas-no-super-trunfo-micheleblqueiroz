@@ -7,6 +7,9 @@ int main() {
     float area1, area2;
     float pib1, pib2;  
     int pontos_turisticos1, pontos_turisticos2;
+    // Added variables for density and GDP per capita
+    float densidade1, densidade2;
+    float pib_per_capita1, pib_per_capita2;
 
     printf("Cadastro da primeira cidade:\n");
     printf("Codigo da cidade: ");
@@ -31,7 +34,6 @@ int main() {
     printf("Codigo da cidade: ");
     scanf("%s", codigo2);
     
-
     printf("Nome: ");
     scanf(" %[^\n]s", nome2);
 
@@ -47,21 +49,35 @@ int main() {
     printf("Numero de pontos turisticos: ");
     scanf("%d", &pontos_turisticos2);
 
+  
+    densidade1 = (float)populacao1 / area1;
+    densidade2 = (float)populacao2 / area2;
+
+   
+    pib_per_capita1 = pib1 / populacao1;
+    pib_per_capita2 = pib2 / populacao2;
+
+   
     printf("\nPrimeira cidade cadastrada:\n");
-    printf("%s\n", codigo1);
-    printf("%s\n", nome1);
-    printf("%d\n", populacao1);  
-    printf("%.2f\n", area1);
-    printf("%.2f\n", pib1);  
-    printf("%d\n", pontos_turisticos1);
+    printf("Codigo: %s\n", codigo1);
+    printf("Nome: %s\n", nome1);
+    printf("Populacao: %d\n", populacao1);  
+    printf("Area: %.2f\n", area1);
+    printf("PIB: %.2f\n", pib1);  
+    printf("Pontos turisticos: %d\n", pontos_turisticos1);
+    printf("Densidade populacional: %.2f habitantes/km²\n", densidade1);
+    printf("PIB per capita: %.2f\n", pib_per_capita1);
+
 
     printf("\nSegunda cidade cadastrada:\n");
-    printf("%s\n", codigo2);
-    printf("%s\n", nome2);
-    printf("%d\n", populacao2); 
-    printf("%.2f\n", area2);
-    printf("%.2f\n", pib2);  
-    printf("%d\n", pontos_turisticos2);
+    printf("Codigo: %s\n", codigo2);
+    printf("Nome: %s\n", nome2);
+    printf("Populacao: %d\n", populacao2); 
+    printf("Area: %.2f\n", area2);
+    printf("PIB: %.2f\n", pib2);  
+    printf("Pontos turisticos: %d\n", pontos_turisticos2);
+    printf("Densidade populacional: %.2f habitantes/km²\n", densidade2);
+    printf("PIB per capita: %.2f\n", pib_per_capita2);
 
     return 0;
 }
