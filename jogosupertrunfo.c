@@ -7,7 +7,7 @@ int main() {
     float area1, area2;
     float pib1, pib2;  
     int pontos_turisticos1, pontos_turisticos2;
-    // Added variables for density and GDP per capita
+   
     float densidade1, densidade2;
     float pib_per_capita1, pib_per_capita2;
 
